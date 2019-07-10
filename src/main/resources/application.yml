@@ -1,0 +1,30 @@
+server:
+  port: 9001
+my:
+   person:
+      - name: zhangsan
+        age: 21
+        sex: nan
+      - name: zhangsan
+        age: 22
+        sex: nan
+      - name: zhangsan
+        age: 23
+        sex: nan
+
+#DB Configuration:
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 59852369
+
+#spring集成Mybatis环境
+
+
+#加载Mybatis映射文件
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  #pojo别名扫描
+  type-aliases-package: com.qf.domain
